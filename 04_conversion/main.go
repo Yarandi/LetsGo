@@ -29,7 +29,7 @@ func main()  {
 	if err != nil {
 		fmt.Println(err)
 	}else {
-		fmt.Println("your rate is: ", convertedInput)
+		fmt.Println("your rate is: ", convertedInput + 1)
 	}
 	
 }
