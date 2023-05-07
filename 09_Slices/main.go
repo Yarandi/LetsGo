@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	//"sort"
 )
 
@@ -33,36 +34,11 @@ func main(){
 	highScores = append(highScores, 13, 14, 15, 16)
 	fmt.Println(highScores)
 
+	//sorting 
+	sort.Ints(highScores)
 
+	//check if this slice soreted or not
+	fmt.Println(sort.IntsAreSorted(highScores))
 
-
-
-
-
-
-
-	// myFruitList = append(myFruitList, "benana", "mongo", "cherry")
-	// fmt.Println(myFruitList)
-
-	// myFruitList = append(myFruitList[:3])
-	// fmt.Println(myFruitList)
-  
-	// //make 
-	// highScores := make([]int, 4)
-
-	// highScores[0] = 947
-	// highScores[1] = 342
-	// highScores[2] = 231
-	// highScores[3] = 657
-	// //highScores[4] = 654
-	// fmt.Println(highScores)
-
-	// highScores = append(highScores, 367, 789)
-
-	// sort.Ints(highScores)
-	// fmt.Println(highScores)
-
-	// //check ints is sorted or not
-	// fmt.Println(sort.IntsAreSorted(highScores))
 
 }
