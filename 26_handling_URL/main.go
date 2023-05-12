@@ -37,8 +37,6 @@ func main() {
 		Path: "/abc",
 		RawPath: "user=hamed",
 	}
-	
-	anotherURL := partofUrl.String()
-	fmt.Println(anotherURL)
+	fmt.Println(partofUrl.String())
 }
 
