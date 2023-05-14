@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	PerformGetRequest()
+	//PerformGetRequest()
+      PerformPostJsonRequest()
 }
 
 func PerformGetRequest() {
@@ -32,4 +33,26 @@ func PerformGetRequest() {
 	fmt.Println("byteCount is: ", byteCount)
 	fmt.Println(responseString.String())
 
+}
+
+func PerformPostJsonRequest() {
+	const myUrl = "http://localhost:8000/post"
+
+	//fake json payload
+	request := strings.NewReader(`
+		{
+			"name":"hamed",
+			"coursename":"golang",
+			"website":"yarandi.com"
+		}
+	`)
+	response, err := http.Post(myUrl, "application/json", request)
+	if err != nil {
+		panic(err)
+	}
+	//should close the body
+	defer response.Body.Close()
+
+	content, _ := ioutil.ReadAll(response.Body)
+	fmt.Println(string(content))
 }
