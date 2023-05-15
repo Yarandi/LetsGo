@@ -91,4 +91,8 @@ func DecodeJson() {
 	for key, value := range myOnlineData{
 		fmt.Printf("key is %v and value is %v and Type is: %T \n", key, value, value)
 	}
+	//key is Price and value is 299 and Type is: float64
+	//key is website and value is t.on and Type is: string
+	//key is tags and value is [web-dev js] and Type is: []interface {}
+	//key is coursename and value is ReactJS and Type is: string
 }
